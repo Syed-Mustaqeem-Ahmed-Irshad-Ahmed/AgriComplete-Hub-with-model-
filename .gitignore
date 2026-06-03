@@ -7,14 +7,5 @@ venv311/
 __pycache__/
 *.pyc
 
-# Model files (if large)
-*.pt
-*.pth
-*.h5
-*.keras
-
 # VS Code
 .vscode/
-
-# Database (optional)
-*.db
