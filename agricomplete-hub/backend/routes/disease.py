@@ -43,6 +43,7 @@ def load_model():
         with open(CLASS_NAMES_PATH, 'r') as f:
             class_names = json.load(f)
             
+        print(f'Loading disease model to device: {device}')
         model = models.mobilenet_v2(pretrained=False)
         model.classifier[1] = nn.Linear(model.last_channel, len(class_names))
         model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
